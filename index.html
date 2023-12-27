@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Level-UP your online security with our Windows Password Generator. Create strong and unique passwords for Windows users.">
+	<meta name="keywords" content="Windows password generator, Windows 10 password generator, Windows 11 password generator, free password generator, strong password generator, unique password generator, random password generator">
+
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	<title>Windows Password Generator - Generate Secure Passwords for Windows users</title>
+</head>
+<body class="bg-body-tertiary">
+	<div class="container">
+		<main>
+				<div class="py-5 text-center">
+					<h1>Generate Secure Passwords for Windows users</h1>
+				</div>
+				<div class="py-1">
+					<label class="alert alert-success" for="random_password_size" role="alert">
+						1
+					</label>
+				</div>
+				<div class="py-1">
+					<input class="form-control" id="random_password_size" type="number" value="10" min="1" max="1000">
+				</div>
+				<div class="py-1">
+					<button class="btn btn-success" type="button" onclick="generateRandomPassword('random_password_size')">1</button>
+				</div>
+				<hr/>
+				<div class="py-1">
+					<label class="alert alert-secondary" for="complex_password_size" role="alert">
+						2
+					</label>
+				</div>
+				<div class="py-1">
+					<input class="form-control" id="complex_password_size" type="number" value="10" min="1" max="24">
+				</div>
+				<div class="py-1">
+					<button class="btn btn-secondary" type="button" onclick="generateComplexPassword('complex_password_size')">2</button>
+				</div>
+		</main>
+		<footer>
+			<p class="lead text-secondary text-center">
+				This project is <b>Open Source</b>, page on <a class="text-decoration-none text-info" target="_blank" href="https://github.com/WindowsPasswordGenerator/WindowsPasswordGenerator.github.io">GitHub</a>.
+				<a class="text-decoration-none text-success" target="_blank" href="https://send.monobank.ua/jar/77PehNfWnX">Support this project</a>.
+			</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
