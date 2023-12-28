@@ -8,9 +8,9 @@ const LOWER_LETTERS = [
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 const SPECIAL_CHARACTERS = [
-    '\\', '-', '!', '"', '#', '$', '%', '&', '(', ')', '*', ',', '.',
-    '/', ':', ';', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}',
-    '~', '+', '<', '=', '>',
+    '\'', '\\', '-', '!', '"', '#', '$', '%', '&', '(', ')', '*', ',',
+    '.', '/', ':', ';', '?', '@', '[', ']', '^', '_', '`', '{', '|',
+    '}', '~', '+', '<', '=', '>',
 ];
 
 function getRandKey(elements) {
@@ -33,15 +33,26 @@ function getRandHash(size, elements) {
 	return hash;
 }
 
+function getInputValue(input_id) {
+    const element = document.getElementById(input_id);
+    const size = parseInt(element.value);
+    const max = parseInt(element.getAttribute('max'));
+
+    if (size > max)
+        return max;
+
+    return size
+}
+
 function generateRandomPassword(size_input_id) {
-	const size = document.getElementById(size_input_id).value;
+	const size = getInputValue(size_input_id);
     const elements = [].concat(DIGITS, UPPER_LETTERS, LOWER_LETTERS,SPECIAL_CHARACTERS)
 
 	alert(getRandHash(size, elements));
 }
 
 function generateComplexPassword(size_input_id) {
-	const size = document.getElementById(size_input_id).value;
+	const size = getInputValue(size_input_id);
 	const element_map = [DIGITS, UPPER_LETTERS, LOWER_LETTERS, SPECIAL_CHARACTERS];
     let temp_element_map = [...element_map];
     let hash = '';
@@ -58,3 +69,4 @@ function generateComplexPassword(size_input_id) {
 
 	alert(hash);
 }
+
