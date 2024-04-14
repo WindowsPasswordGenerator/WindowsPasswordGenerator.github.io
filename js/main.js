@@ -84,8 +84,8 @@ function generateRandomPassword(size_input_id) {
 function generateComplexPassword(size_input_id) {
     const size = getInputValue(size_input_id);
     const element_map = [DIGITS, UPPER_LETTERS, LOWER_LETTERS, SPECIAL_CHARACTERS];
-
-	alert(getComplexHash(size, element_map));
+    
+    alert(getComplexHash(size, element_map));
 }
 
 function generateReadableAndWritablePassword(size_input_id) {
@@ -96,6 +96,6 @@ function generateReadableAndWritablePassword(size_input_id) {
         READEABLE_AND_WRITABLE_LOWER_LETTERS, 
         READEABLE_AND_WRITABLE_SPECIAL_CHARACTERS,
     ];
-
-	alert(getComplexHash(size, element_map));
+    
+    alert(getComplexHash(size, element_map));
 }
