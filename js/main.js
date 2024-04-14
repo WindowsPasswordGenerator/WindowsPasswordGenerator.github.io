@@ -13,6 +13,19 @@ const SPECIAL_CHARACTERS = [
     '}', '~', '+', '<', '=', '>',
 ];
 
+const READEABLE_AND_WRITABLE_DIGITS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const READEABLE_AND_WRITABLE_UPPER_LETTERS = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'M',
+    'N', 'P', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z',
+];
+const READEABLE_AND_WRITABLE_LOWER_LETTERS = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm',
+    'n', 'p', 'r', 's', 't', 'w', 'x', 'y', 'z',
+];
+const READEABLE_AND_WRITABLE_SPECIAL_CHARACTERS = [
+    '-', '#', '$', '@', '_',
+];
+
 function getRandKey(elements) {
 	return Math.floor(Math.random() * elements.length);
 }
@@ -44,16 +57,7 @@ function getInputValue(input_id) {
     return size
 }
 
-function generateRandomPassword(size_input_id) {
-	const size = getInputValue(size_input_id);
-    const elements = [].concat(DIGITS, UPPER_LETTERS, LOWER_LETTERS,SPECIAL_CHARACTERS)
-
-	alert(getRandHash(size, elements));
-}
-
-function generateComplexPassword(size_input_id) {
-	const size = getInputValue(size_input_id);
-	const element_map = [DIGITS, UPPER_LETTERS, LOWER_LETTERS, SPECIAL_CHARACTERS];
+function getComplexHash(size, element_map) {
     let temp_element_map = [...element_map];
     let hash = '';
 
@@ -67,6 +71,31 @@ function generateComplexPassword(size_input_id) {
         temp_element_map.splice(random_key, 1);
     }
 
-	alert(hash);
+    return hash;
 }
 
+function generateRandomPassword(size_input_id) {
+	const size = getInputValue(size_input_id);
+    const elements = [].concat(DIGITS, UPPER_LETTERS, LOWER_LETTERS,SPECIAL_CHARACTERS)
+
+	alert(getRandHash(size, elements));
+}
+
+function generateComplexPassword(size_input_id) {
+    const size = getInputValue(size_input_id);
+    const element_map = [DIGITS, UPPER_LETTERS, LOWER_LETTERS, SPECIAL_CHARACTERS];
+
+	alert(getComplexHash(size, element_map));
+}
+
+function generateReadableAndWritablePassword(size_input_id) {
+    const size = getInputValue(size_input_id);
+    const element_map = [
+        READEABLE_AND_WRITABLE_DIGITS, 
+        READEABLE_AND_WRITABLE_UPPER_LETTERS, 
+        READEABLE_AND_WRITABLE_LOWER_LETTERS, 
+        READEABLE_AND_WRITABLE_SPECIAL_CHARACTERS,
+    ];
+
+	alert(getComplexHash(size, element_map));
+}
