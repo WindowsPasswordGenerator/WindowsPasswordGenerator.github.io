@@ -1,34 +1,34 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="uk" data-bs-theme="dark">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Level-UP your online security with our Windows Password Generator. Create strong and unique passwords for Windows users.">
-	<meta name="keywords" content="Windows password generator, Windows 10 password generator, Windows 11 password generator, free password generator, strong password generator, unique password generator, random password generator, readable and writable password generator">
+	<meta name="keywords" content="Генератор паролів для Windows, Генератор паролів для Windows 10, Генератор паролів для Windows 11, безкоштовний генератор паролів, генератор надійних паролів, генератор унікальних паролів, генератор випадкових паролів, генератор паролів для читання та запису, генератор паролів для читання та запису в журнали">
 
-	<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link href="/favicon.ico" rel="icon" type="image/x-icon">
-	<link href="https://windowspasswordgenerator.github.io/uk/" rel="alternate" hreflang="uk">
+	<link href="https://windowspasswordgenerator.github.io/" rel="alternate" hreflang="en">
 
-	<title>Windows Password Generator - Generate Secure Passwords for Windows users</title>
+	<title>Windows Password Generator - Створення надійних паролів для Windows користувачів</title>
 </head>
 <body>
 	<main class="container">
 		<div class="my-5">
 			<div class="mb-5 text-center">
-				<h1>Generate Secure Passwords for Windows users</h1>
+				<h1>Створення надійних паролів для Windows користувачів</h1>
 			</div>
 			<div class="alert alert-primary">
 				<p class="text-light">
 					<b>
-						The passwords contain characters of the <a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements#reference" class="text-primary" target="_blank">following categories</a>:
+						Паролі містять символи <a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements#reference" class="text-primary" target="_blank">наступних категорій</a>:
 					</b>	
 				</b>
 				<ul class="mb-0 text-light">
 					<li>
 						<p class="mb-0">
-							Uppercase letters of European languages (A through Z):
+							Великі літери Європейських мов (від A до Z):
 						</p>
 						<ul class="list-inline">
 							<li class="list-inline-item text-success">A</li>
@@ -61,7 +61,7 @@
 					</li>
 					<li>
 						<p class="mb-0">
-							Lowercase letters of European languages (a through z):
+							Малі літери Європейських мов (від a до z):
 						</p>
 						<ul class="list-inline">
 							<li class="list-inline-item text-success">a</li>
@@ -94,7 +94,7 @@
 					</li>
 					<li>
 						<p class="mb-0">
-							Base 10 digits (0 through 9):
+							Базові 10 цифр (від 0 до 9):
 						</p>
 						<ul class="list-inline">
 							<li class="list-inline-item">0</li>
@@ -111,7 +111,7 @@
 					</li>
 					<li>
 						<p class="mb-0">
-							Non-alphanumeric characters (special characters):
+							Не буквено-цифрові символи (спеціальні символи):
 						</p>
 						<ul	class="list-inline">
 							<li class="list-inline-item">'</li>
@@ -153,39 +153,39 @@
 			<div class="mb-3">
 				<div class="row g-3 align-items-center">
 					<div class="col-auto">
-						<label for="readable_and_writable_password_size" class="col-form-label">Number of characters</label>
+						<label for="readable_and_writable_password_size" class="col-form-label">Кількість символів</label>
 					</div>
 					<div class="col-auto">
 						<input class="form-control" id="readable_and_writable_password_size" type="number" value="10" min="1" step="1" max="999" minlength="1" maxlength="3">
 					</div>
 					<div class="col-auto">
-						<button class="btn btn-success" type="button" onclick="generateReadableAndWritablePassword('readable_and_writable_password_size')">Generate Readable And Writable Password</button>
+						<button class="btn btn-success" type="button" onclick="generateReadableAndWritablePassword('readable_and_writable_password_size')">Згенерувати доступний для читання та запису пароль</button>
 					</div>
 				</div>
 			</div>
 			<div class="mb-3">
 				<div class="row g-3 align-items-center">
 					<div class="col-auto">
-						<label for="complex_password_size" class="col-form-label">Number of characters</label>
+						<label for="complex_password_size" class="col-form-label">Кількість символів</label>
 					</div>
 					<div class="col-auto">
 						<input class="form-control" id="complex_password_size" type="number" value="10" min="1" step="1" max="999" minlength="1" maxlength="3">
 					</div>
 					<div class="col-auto">
-						<button class="btn btn-warning" type="button" onclick="generateComplexPassword('complex_password_size')">Generate Complex Password</button>
+						<button class="btn btn-warning" type="button" onclick="generateComplexPassword('complex_password_size')">Згенерувати складний пароль</button>
 					</div>
 				</div>
 			</div>
 			<div class="mb-3">
 				<div class="row g-3 align-items-center">
 					<div class="col-auto">
-						<label for="random_password_size" class="col-form-label">Number of characters</label>
+						<label for="random_password_size" class="col-form-label">Кількість символів</label>
 					</div>
 					<div class="col-auto">
 						<input class="form-control" id="random_password_size" type="number" value="10" min="1" step="1" max="999" minlength="1" maxlength="3">
 					</div>
 					<div class="col-auto">
-						<button class="btn btn-danger" type="button" onclick="generateRandomPassword('random_password_size')">Generate Random Password</button>
+						<button class="btn btn-danger" type="button" onclick="generateRandomPassword('random_password_size')">Згенерувати випадковий пароль</button>
 					</div>
 				</div>
 			</div>
@@ -195,17 +195,17 @@
 		<div class="text-center container">
 			<div class="col-lg-6 mx-auto">
 				<p class="lead mb-0 text-light">
-					This project is <b>Open-Source</b>, page on <a class="text-primary" target="_blank" href="https://github.com/WindowsPasswordGenerator/WindowsPasswordGenerator.github.io">GitHub</a>. All generation takes place at the user's browser using JavaScript.
+					Цей проект повністю <b>Open-Source</b>, сторінка на <a class="text-primary" target="_blank" href="https://github.com/WindowsPasswordGenerator/WindowsPasswordGenerator.github.io">GitHub</a>. Все генерування відбувається у користувача в браузері використовуючи JavaScript.
 				</p>
 				<p class="lead mb-0">
-					<a class="text-primary" target="_blank" href="https://send.monobank.ua/jar/77PehNfWnX">Support this project</a>
+					<a class="text-primary" target="_blank" href="https://send.monobank.ua/jar/77PehNfWnX">Підтримайте цей проект</a>
 				</p>
 				<p class="lead mb-5">
-					<a class="text-primary" href="/uk/">Українська версія</a>
+					<a class="text-primary" href="/">English version</a>
 				</p>
 			</div>
 		</div>
 	</footer>
-	<script type="text/javascript" src="/js/main.js?1"></script>
+	<script type="text/javascript" src="/../js/main.js?1"></script>
 </body>
 </html>
