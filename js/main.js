@@ -16,11 +16,11 @@ const SPECIAL_CHARACTERS = [
 const READEABLE_AND_WRITABLE_DIGITS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const READEABLE_AND_WRITABLE_UPPER_LETTERS = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'M',
-    'N', 'P', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z',
+    'N', 'P', 'S', 'T', 'W', 'X', 'Z',
 ];
 const READEABLE_AND_WRITABLE_LOWER_LETTERS = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm',
-    'n', 'p', 'r', 's', 't', 'w', 'x', 'y', 'z',
+    'n', 'p', 's', 't', 'w', 'x', 'z',
 ];
 const READEABLE_AND_WRITABLE_SPECIAL_CHARACTERS = [
     '-', '#', '$', '@', '_',
